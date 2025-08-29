@@ -1,23 +1,33 @@
 # UIExpansions
-This is where she makes a mod.
+Geode API that adds a lot of new, highly customizable UI elements to Geometry Dash.
 
-<img src="logo.png" width="150" alt="the mod's logo" />
+**This API adds:**
+- Dropdown Menus
+...
 
-*Update logo.png to change your mod's icon (please)*
-
-## Getting started
-We recommend heading over to [the getting started section on our docs](https://docs.geode-sdk.org/getting-started/) for useful info on what to do next.
-
-## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
-```sh
-# Assuming you have the Geode CLI set up already
-geode build
+## Usage
+You can use this API as a dependency by declaring it in your ``mod.json`` file:
+```json
+{
+    "dependencies": [
+        {
+            "id": "natrium.ui_expansions",
+            "version": "1.0.0"
+        }
+    ]
+}
 ```
 
-# Resources
-* [Geode SDK Documentation](https://docs.geode-sdk.org/)
-* [Geode SDK Source Code](https://github.com/geode-sdk/geode/)
-* [Geode CLI](https://github.com/geode-sdk/cli)
-* [Bindings](https://github.com/geode-sdk/bindings/)
-* [Dev Tools](https://github.com/geode-sdk/DevTools)
+After doing so, you can include the header you want. For example, the dropdown menu would be included like so:
+```cpp
+#include <natrium.ui_expansions/include/DropdownMenu.hpp>
+```
+
+## Documentation & Examples
+You can find documentation of everything in the docs folder. The folder also contains several examples.
+
+### Dropdown Menu
+- [**Documentation**](./docs/DropdownMenu.md)
+- [Basic Example](./docs/examples/Dropdown%20Menu/Basic-Example.md)
+- [Visuals Example](./docs/examples/Dropdown%20Menu/Visuals-Example.md)
+- [Advanced Example](./docs/examples/Dropdown%20Menu/Advanced-Example.md)

@@ -11,6 +11,10 @@
 	"version": "v1.0.0",
 	"developer": "Natrium",
 	"description": "API for adding new kinds of UI elements",
+	"repository": "https://github.com/GDNatrium/UI-Expansions",
+	"tags": [
+		"developer", "utility", "api", "interface", "enhancement"
+	],
 	"api": {
 		"include": [
 			"include/*.hpp"
