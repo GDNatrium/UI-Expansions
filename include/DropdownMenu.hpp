@@ -18,6 +18,11 @@ class UI_EXPANSIONS_DLL DropdownMenu : public CCLayer {
 public:
 	/// Create the dropdown menu.
 	/// @param options - The selectable options
+	/// @returns The created DropdownMenu
+	static DropdownMenu* create(const std::vector<std::string>& options);
+
+	/// Create the dropdown menu.
+	/// @param options - The selectable options
 	/// @param defaultElement - Index of the default-selected element. -1 for none.
 	/// @param defaultText - The text that gets shown if no option is selected. Only visible if defaultElement is -1
 	/// @param width - The width of the menu
@@ -25,7 +30,7 @@ public:
 	/// @param bgTexture - The texture of the menu, has to be a CCScale9Sprite
 	/// @param bgColor - The color of the menu, tints the bgTexture
 	/// @returns The created DropdownMenu
-	static DropdownMenu* create(const std::vector<std::string>& options, int defaultElement = -1, const char* defaultText = "Select...", float width = 150, float height = 150, const char* bgTexture = "GJ_square01.png", ccColor3B bgColor = ccc3(255, 255, 255));
+	static DropdownMenu* createWithDefaultElement(const std::vector<std::string>& options, int defaultElement = -1, const char* defaultText = "Select...", float width = 150, float height = 150, const char* bgTexture = "GJ_square01.png", ccColor3B bgColor = ccc3(255, 255, 255));
 
 	/// Create the dropdown menu.
 	/// @param options - The selectable options
@@ -36,7 +41,7 @@ public:
 	/// @param bgTexture - The texture of the menu, has to be a CCScale9Sprite
 	/// @param bgColor - The color of the menu, tints the bgTexture
 	/// @returns The created DropdownMenu
-	static DropdownMenu* create(const std::vector<std::string>& options, const std::vector<int>& defaultElements = {}, const char* defaultText = "Select...", float width = 150, float height = 150, const char* bgTexture = "GJ_square01.png", ccColor3B bgColor = ccc3(255, 255, 255));
+	static DropdownMenu* createWithDefaultElements(const std::vector<std::string>& options, const std::vector<int>& defaultElements = {}, const char* defaultText = "Select...", float width = 150, float height = 150, const char* bgTexture = "GJ_square01.png", ccColor3B bgColor = ccc3(255, 255, 255));
 
 	/// Expands or shrinks the menu, depending on if it is currently expanded or not.
 	void onExpand(CCObject* sender);

@@ -68,7 +68,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 
         std::vector<std::string> digits = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-        auto dropdown = DropdownMenu::create(digits);
+        auto dropdown = DropdownMenu::createWithDefaultElement(digits);
         dropdown->setPosition(winSize / 2);
         this->addChild(dropdown);
 
@@ -79,7 +79,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 
 While we are at it, let's change the visuals of the menu.
 ```cpp
-DropdownMenu::create(digits, -1, "Numbers", 150, 150, "GJ_square04.png");
+DropdownMenu::createWithDefaultElement(digits, -1, "Numbers", 150, 150, "GJ_square04.png");
 ```
 
 <img src="https://cdn.discordapp.com/attachments/923715967589179452/1410995699159400459/image.png?ex=68b30ba5&is=68b1ba25&hm=84d7fd149e5b810c62a570b7625a77f9ec2ff0306d55fbe7f2832c68f84790c3&" alt="Default" width="400">
@@ -87,7 +87,7 @@ DropdownMenu::create(digits, -1, "Numbers", 150, 150, "GJ_square04.png");
 Now, instead of displaying "Numbers" at the top, we want to add up all selected numbers! To achieve this, we first need to disable the default callback, which sets the main text.
 
 ```cpp
-auto dropdown = DropdownMenu::create(digits, -1, "Numbers", 150, 150, "GJ_square04.png");
+auto dropdown = DropdownMenu::createWithDefaultElement(digits, -1, "Numbers", 150, 150, "GJ_square04.png");
 dropdown->m_disableDefaultCallbacks = true;
 ```
 
@@ -164,7 +164,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 
         std::vector<std::string> digits = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-        auto dropdown = DropdownMenu::create(digits, -1, "Numbers", 150, 150, "GJ_square04.png");
+        auto dropdown = DropdownMenu::createWithDefaultElement(digits, -1, "Numbers", 150, 150, "GJ_square04.png");
         dropdown->m_disableDefaultCallbacks = true;
         dropdown->setCallback([this, dropdown](int index, const std::string& value) {
             this->addUpNumbers(index, value, dropdown);

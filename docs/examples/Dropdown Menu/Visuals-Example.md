@@ -84,7 +84,7 @@ class $modify(MyMenuLayer, MenuLayer) {
             "Demon"
         };
 
-        auto dropdown = DropdownMenu::create(difficulty);
+        auto dropdown = DropdownMenu::createWithDefaultElement(difficulty);
         dropdown->setPosition(winSize / 2);
         this->addChild(dropdown);
 
@@ -103,25 +103,25 @@ First, we want to set a default element. For example, we want the menu to have "
 In our case, "Easy" is the first element, so its index is 0.
 
 ```cpp
-DropdownMenu::create(difficulty, 0);
+DropdownMenu::createWithDefaultElement(difficulty, 0);
 ```
 
 We can also change the default text, for when no element is selected. By default it is "Select...", but for our use case "Difficulty" is more fitting.
 
 ```cpp
-DropdownMenu::create(difficulty, 0, "Difficulty");
+DropdownMenu::createWithDefaultElement(difficulty, 0, "Difficulty");
 ```
 
 Next, we want to change the size of our menu. We can pass values for width and height to the create function.
 
 ```cpp
-DropdownMenu::create(difficulty, 0, "Difficulty", 180, 200);
+DropdownMenu::createWithDefaultElement(difficulty, 0, "Difficulty", 180, 200);
 ```
 
 Lastly, we want to change the background. The default brown one doesn't fit our needs, and the white outlines are ugly. Let's use a white background, and set the color ourselves!
 
 ```cpp
-DropdownMenu::create(difficulty, 0, "Difficulty", 180, 240, "GJ_square06.png", ccc3(44, 145, 255));
+DropdownMenu::createWithDefaultElement(difficulty, 0, "Difficulty", 180, 240, "GJ_square06.png", ccc3(44, 145, 255));
 ```
 
 Our menu looks like this now.  
@@ -136,7 +136,7 @@ Well, that has several issues!
 Lucky for us, we can use fields to fix these issues.
 
 ```cpp
-auto dropdown = DropdownMenu::create(difficulty, 0, "Difficulty", 180, 240, "GJ_square06.png", ccc3(44, 145, 255));
+auto dropdown = DropdownMenu::createWithDefaultElement(difficulty, 0, "Difficulty", 180, 240, "GJ_square06.png", ccc3(44, 145, 255));
 // Change the color of selected elements
 dropdown->m_selectedColor = ccc3(44, 255, 255); 
 
@@ -172,7 +172,7 @@ class $modify(MyMenuLayer, MenuLayer) {
             "Demon"
         };
 
-        auto dropdown = DropdownMenu::create(difficulty, 0, "Difficulty", 180, 240, "GJ_square06.png", ccc3(44, 145, 255));
+        auto dropdown = DropdownMenu::createWithDefaultElement(difficulty, 0, "Difficulty", 180, 240, "GJ_square06.png", ccc3(44, 145, 255));
         dropdown->m_selectedColor = ccc3(44, 255, 255); 
         dropdown->m_gap = 15.f;
         dropdown->m_growToFit = true; 

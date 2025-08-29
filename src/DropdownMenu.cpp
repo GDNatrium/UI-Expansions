@@ -1,6 +1,17 @@
 #include "../include/DropdownMenu.hpp"
 
-DropdownMenu* DropdownMenu::create(const std::vector<std::string>& options, int defaultElement, const char* defaultText, float width, float height, const char* bgTexture, ccColor3B bgColor) {
+DropdownMenu* DropdownMenu::create(const std::vector<std::string>& options) {
+    auto ret = new DropdownMenu;
+    if (ret->init(options, {}, "Select...", 150, 150, "GJ_square01.png", ccc3(255, 255, 255))) {
+        ret->autorelease();
+        return ret;
+    }
+
+    delete ret;
+    return nullptr;
+}
+
+DropdownMenu* DropdownMenu::createWithDefaultElement(const std::vector<std::string>& options, int defaultElement, const char* defaultText, float width, float height, const char* bgTexture, ccColor3B bgColor) {
     auto ret = new DropdownMenu;
 
     std::vector<int> defaultElements;
@@ -16,7 +27,7 @@ DropdownMenu* DropdownMenu::create(const std::vector<std::string>& options, int 
     return nullptr;
 }
 
-DropdownMenu* DropdownMenu::create(const std::vector<std::string>& options, const std::vector<int>& defaultElements, const char* defaultText, float width, float height, const char* bgTexture, ccColor3B bgColor) {
+DropdownMenu* DropdownMenu::createWithDefaultElements(const std::vector<std::string>& options, const std::vector<int>& defaultElements, const char* defaultText, float width, float height, const char* bgTexture, ccColor3B bgColor) {
     auto ret = new DropdownMenu;
     if (ret->init(options, defaultElements, defaultText, width, height, bgTexture, bgColor)) {
         ret->autorelease();

@@ -5,6 +5,12 @@ For full examples, see [Dropdown Menu Examples](./examples/Dropdown%20Menu/Basic
 ```cpp
 static DropdownMenu* create(
     const std::vector<std::string>& options, 
+)
+```
+
+```cpp
+static DropdownMenu* createWithDefaultElement(
+    const std::vector<std::string>& options, 
     int defaultElement = -1, 
     const char* defaultText = "Select...", 
     float width = 150.0f, 
@@ -15,7 +21,7 @@ static DropdownMenu* create(
 ```
 
 ```cpp
-static DropdownMenu* create(
+static DropdownMenu* createWithDefaultElements(
     const std::vector<std::string>& options, 
     const std::vector<int>& defaultElements = {}, 
     const char* defaultText = "Select...", 
