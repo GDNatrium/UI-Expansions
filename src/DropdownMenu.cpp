@@ -41,8 +41,6 @@ DropdownMenu* DropdownMenu::createWithDefaultElements(const std::vector<std::str
 bool DropdownMenu::init(const std::vector<std::string>& options, const std::vector<int>& defaultElements, const char* defaultText, float width, float height, const char* bgTexture, ccColor3B bgColor) {
     if (!CCLayer::init()) return false;
     
-    // Maybe later add multiselect option
-
     m_options = options;
     m_width = width;
     m_height = height;
@@ -100,7 +98,6 @@ void DropdownMenu::onExpand(CCObject* sender) {
     arrow->setFlipY(!m_isExpanded);
 
     if (!m_isExpanded) {
-        // open it
         auto bg = CCScale9Sprite::create(m_bgTexture);
         bg->setContentSize({ m_width, m_height });
         bg->setAnchorPoint(ccp(0.5, 1));

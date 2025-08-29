@@ -1,5 +1,5 @@
-# UIExpansions
-Geode API that adds a lot of new, highly customizable UI elements to Geometry Dash.
+# UI Expansions
+Geode API that adds a lot of highly customizable UI elements to Geometry Dash.
 
 **This API adds:**
 - Dropdown Menus
