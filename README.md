@@ -28,6 +28,5 @@ You can find documentation of everything in the docs folder. The folder also con
 
 ### Dropdown Menu
 - [**Documentation**](./docs/DropdownMenu.md)
-- [Basic Example](./docs/examples/Dropdown%20Menu/Basic-Example.md)
+- [Setup Example](./docs/examples/Dropdown%20Menu/Basic-Example.md)
 - [Visuals Example](./docs/examples/Dropdown%20Menu/Visuals-Example.md)
-- [Advanced Example](./docs/examples/Dropdown%20Menu/Advanced-Example.md)

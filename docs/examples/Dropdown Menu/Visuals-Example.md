@@ -4,9 +4,8 @@ For most usecases, you can use the default values for your popup.
 
 In this example we will create 3 different popups with increasing complexity.
 
-- [Basic Setup](Basic-Example.md) - A dropdown menu that allows you to pick the color of a button.
+- [Example Setup](Example.md) - A dropdown menu that allows you to pick the color of a button.
 - **Visuals Setup** - A visually customized dropdown menu that allows you to select a difficulty.
-- [Advanced Setup](Advanced-Example.md) - A highly customized dropdown menu, which changes how callbacks work to allow for multiselection and visual changes.
 
 ## Setup
 For all usecases, you first have to include the API as a dependency in your mod. You can do so by declaring it like this in your `mod.json` file.
@@ -28,7 +27,7 @@ After doing so, you can include the DropdownMenu header.
 ```
 
 ## Example
-In this example we customize the visuals of other popup. This will not include setting up callbacks, check the [Basic Setup](Basic-Example.md) for that.
+In this example we customize the visuals of other popup. This will not include setting up callbacks, check the [Example Setup](Example.md) for that.
 
 **Note:** I have removed some elements from MenuLayer, which is not included in the code example. This is not related to how the dropdown menu works, and is only a visual choice for the images.
 

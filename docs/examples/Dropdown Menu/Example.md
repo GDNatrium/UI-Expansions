@@ -1,12 +1,9 @@
-# Dropdown Menu Examples - Basic Setup
+# Dropdown Menu Examples - Example Setup
 
 For most usecases, you can use the default values for your popup. 
 
-In this example we will create 3 different popups with increasing complexity.
-
-- **Basic Setup** - A dropdown menu that allows you to pick the color of a button.
+- **Example Setup** - A dropdown menu that allows you to pick the color of a button.
 - [Visuals Setup](Visuals-Example.md) - A visually customized dropdown menu that allows you to select a difficulty.
-- [Advanced Setup](Advanced-Example.md) - A highly customized dropdown menu, which changes how callbacks work to allow for multiselection and visual changes.
 
 ## Setup
 For all usecases, you first have to include the API as a dependency in your mod. You can do so by declaring it like this in your `mod.json` file.
