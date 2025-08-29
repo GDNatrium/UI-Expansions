@@ -94,6 +94,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 ```
 
 This will create the dropdown menu in the default look.
+
 <img src="https://cdn.discordapp.com/attachments/923715967589179452/1410983813957554187/image.png?ex=68b30094&is=68b1af14&hm=8eab2ea5513f160acd1cee7121514853a322af59d266b657315be459a27d51a8&" alt="Default" width="400">
 
 We now want to customize the look to fit our needs. 
