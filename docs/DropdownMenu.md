@@ -43,7 +43,7 @@ Creates a dropdown menu.
 **Optional**
 - `defaultElement` (*int*) - Index of the default-selected element. -1 for none. **Default:** `-1`
 - `defaultElements` (*const std::vector\<int>&*) - Vector of default-selected elements. {} for none. **Default:** `{}`
-- `defaultText` (*const char\**) - The text that is displayed if no option is selected. Only visible if defaultElement is -1 or index does not exist in *options*. **Default:** `"Select..."`
+- `defaultText` (*const char\**) - The text that is displayed if no option is selected. Only visible if defaultElement is -1, {}, or index does not exist in *options*. **Default:** `"Select..."`
 - `width` (*float*) - Width of the menu. **Default:** `150.0`
 - `height` (*float*) - The height of the list menu when extended. **Default:** `150.0`
 - `bgTexture` (*const char\**) - The background texture of the menu, has to be a *CCScale9Sprite*. **Default:** `"GJ_square01.png"`
@@ -160,11 +160,11 @@ Color of the background. Tints the background texture in this color.
 ---
 
 ```cpp
-int m_selected;
+std::vector<int> m_selected;
 ```
 
 **Description:**  
-Index of the currently selected object. -1 if none, defaultElement on first init.
+Vector of the indeces of the currently selected object. {} if none, defaultElement on first init.
 
 ---
 
@@ -220,7 +220,7 @@ ccColor3B m_selectedColor
 ```
 
 **Description:**  
-The background color of an selected element.
+The background color of a selected element.
 
 **Default:** `ccc3(255, 170, 85)`
 

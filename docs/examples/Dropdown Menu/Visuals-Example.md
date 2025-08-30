@@ -2,8 +2,6 @@
 
 For most usecases, you can use the default values for your popup. 
 
-In this example we will create 3 different popups with increasing complexity.
-
 - [Example Setup](Example.md) - A dropdown menu that allows you to pick the color of a button.
 - **Visuals Setup** - A visually customized dropdown menu that allows you to select a difficulty.
 
@@ -52,7 +50,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 };
 ```
 
-We now want to add our dropdown menu. For that we first have to set all options we want. For our example, we want red, blue, yellow, and green.
+We now want to add our dropdown menu. For that we first have to set all options we want. For our example, we want Easy, Normal, Hard, Harder, Insane, and Demon.
 
 ```cpp
 std::vector<std::string> difficulty = {
@@ -137,7 +135,8 @@ Lucky for us, we can use fields to fix these issues.
 
 ```cpp
 auto dropdown = DropdownMenu::createWithDefaultElement(difficulty, 0, "Difficulty", 180, 240, "GJ_square06.png", ccc3(44, 145, 255));
-// Change the color of selected elements
+
+// Change the background color of selected elements
 dropdown->m_selectedColor = ccc3(44, 255, 255); 
 
 // Change the gap between the menus from 20.0 to 15.0
